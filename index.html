@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Learning Database</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <a href="index.html">Search</a>
+      <a href="table.html">Table</a>
+      <a href="bonus.html">Bonus</a>
+      <span></span>
+      <p>Book Search</p>
+    </div>
+  </nav>
+  <br />
+  <div class="container">
+    <img src="title.png" width="300px" />
+
+    <div class="searchbar">
+      <input id="input" placeholder="Enter Search Here" />
+      <button onclick="search()" type="button" id="search"><img alt="Search"
+          src="https://static.thenounproject.com/png/4009566-200.png" width="40px" height="40px" /></button>
+
+      <div class="dropdown">
+        <select id="filter" class="selectbox">
+          <option selected class="selected" value="nofilter">Search By</option>
+          <option value="title">Title</option>
+          <option value="guid">UID</option>
+          <option value="firstname">First Name</option>
+          <option value="lastname">Last Name</option>
+          <option value="gender">Gender</option>
+        </select>
+        <span class="arrow"></span>
+      </div>
+    </div>
+
+    <br />
+
+    <table id="table" hidden>
+      <thead>
+        <tr>
+          <th>UID</th>
+          <th>Title</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>References</th>
+        </tr>
+      </thead>
+
+      <tbody id="tablebody"></tbody>
+    </table>
+
+    <br>
+
+    <div id="pagenav" class="pagenav">
+      <button id="prevbutton" onclick="prevButton()" hidden>Prev</button>
+      <button id="nextbutton" onclick="nextButton()" hidden>Next</button>
+    </div>
+
+    <div id="pagenav" class="pagenav"></div>
+
+    <p id="timeoutput">Search took: XX.XX ms</p>
+  </div>
+
+  <script src="./dist/DO_NOT_TOUCH.js"></script>
+  <script src="./dist/script.js"></script>
+</body>
+
+</html>

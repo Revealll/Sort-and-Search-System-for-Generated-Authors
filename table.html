@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Table</title>
+  <link href="styles/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <a href="index.html">Search</a>
+      <a href="table.html">Table</a>
+      <a href="bonus.html">Bonus</a>
+      <span></span>
+      <p>Table</p>
+    </div>
+  </nav>
+  <br />
+  <div class="container">
+    <img src="table.png" width="300px" />
+    <div class="searchbar">
+      <p></p>
+      <div class="dropdown">
+        <select class="selectbox" id="category">
+          <option selected class="selected" value="nocategory">Search By</option>
+          <option value="title">Title</option>
+          <option value="uid">UID</option>
+          <option value="firstname">First Name</option>
+          <option value="lastname">Last Name</option>
+          <option value="gender">Gender</option>
+        </select>
+        <span class="arrow"></span>
+      </div>
+
+      <div class="sort">
+        <select class="selectbox" id="order">
+          <option selected class="selected">Accending/Decending</option>
+          <option value="increase">Accending </option>
+          <option value="decrease">Decending</option>
+        </select>
+        <span class="arrow"></span>
+      </div>
+
+      <button onclick="sort()" type="button" id="sort"><img alt="Search"
+          src="https://static.thenounproject.com/png/4009566-200.png" width="40px" height="40px" /></button>
+    </div>
+
+    <br />
+
+    <table id="table" hidden>
+      <thead>
+        <tr>
+          <th>UID</th>
+          <th>Title</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>References</th>
+        </tr>
+      </thead>
+
+      <tbody id="tablebody"></tbody>
+    </table>
+
+    <br />
+
+    <div id="pagenav" class="pagenav">
+      <button id="prevbutton" onclick="prevButton()" hidden>Prev</button>
+      <button id="nextbutton" onclick="nextButton()" hidden>Next</button>
+    </div>
+
+    <p id="timeoutput">Search took: XX.XX ms</p>
+
+  </div>
+
+  <script src="./dist/DO_NOT_TOUCH.js"></script>
+  <script src="./dist/table.js"></script>
+</body>
+
+</html>

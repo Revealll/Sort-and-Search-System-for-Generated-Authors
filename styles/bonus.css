@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f3ddd2;
+  color: #7D5A50;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Reference: https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border-collapse */
+table{ 
+  width: 80%;
+  border-collapse: separate;
+  margin: auto;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+table tr th, table tr td {
+  border-right: 1px solid #7D5A50;
+  border-bottom: 1px solid #7D5A50;
+  padding: 5px;
+}
+
+table tr th:first-child, table tr td:first-child {
+  border-left: 1px solid #7D5A50;
+}
+
+table tr th {
+  background: #7D5A50;
+  border-top: 1px solid #FCDEC0;
+  text-align: center;
+  color: #FCDEC0;
+}
+
+/*Reference: https://codepen.io/mlms13/pen/DWbpwo */
+table tr:first-child th:first-child {
+  border-top-left-radius: 20px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 20px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+/*  Reference: https://www.youtube.com/watch?v=9hnJsNIBq1g&t=434s */
+.searchbar{
+  width: 100%;
+  max-width: 950px;
+  background-color: #B4846C;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border-radius: 60px;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+  position: relative;
+  margin: auto;
+  height: 40px;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.searchbar button{
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #fceee0;
+  cursor: pointer;
+  right: 15px;
+} 
+
+.searchbar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 5px 3px;
+  font-size: 20px;
+  color: #FCDEC0;
+}
+
+::placeholder{
+  color: #FCDEC0;
+}
+
+button:active {
+  background-color: #f6e4d1;
+}
+
+/*Reference: https://www.youtube.com/watch?v=EXzotQV4tDM */
+.navbar {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  width: 90%;
+  height: 50px;
+  top: 10px;
+  margin: auto;
+  background: #7D5A50;
+  border-radius: 10px;
+  display: flex;
+}
+
+nav a{
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  color: #FCDEC0;
+  text-decoration: none;
+  padding: 0 23px;
+  z-index: 1;
+}
+
+nav span{
+  position: absolute;
+  top: 0;
+  left: 185px;
+  width: 95px;
+  height: 100%;
+  background: #B4846C;
+  border-radius: 9.5px;
+  transition: .3s;
+}
+
+nav p{
+  position: absolute;
+  color: #FCDEC0;
+  left: 80%;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+nav a:nth-child(1):hover~span{
+  left: 0px;
+}
+
+nav a:nth-child(2):hover~span{
+  left: 95px;
+}
+
+nav a:nth-child(3):hover~span{
+  left: 185px;
+}

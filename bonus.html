@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Learning Database</title>
+  <link href="styles/bonus.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <a href="index.html">Search</a>
+      <a href="table.html">Table</a>
+      <a href="bonus.html">Bonus</a>
+      <span></span>
+      <p>Bonus</p>
+    </div>
+  </nav>
+  <br />
+  <div class="container">
+    <img src="bonus.png" width="300px" />
+
+    <div class="searchbar">
+      <input id="firstnameone" placeholder="First Name 1" />
+      <input id="lastnameone" placeholder="Last Name 1" />
+      <input id="firstnametwo" placeholder="First Name 2" />
+      <input id="lastnametwo" placeholder="Last Name 2" />
+
+      <button onclick="findJumps()" type="button" id="findjumps"><img alt="Search"
+          src="https://static.thenounproject.com/png/4009566-200.png" width="40px" height="40px" /></button>
+
+    </div>
+
+    <br />
+
+    <p id="jumps"></p>
+
+    <p id="timeoutput">Search took: XX.XX ms</p>
+
+  </div>
+
+  <script src="./dist/DO_NOT_TOUCH.js"></script>
+  <script src="./dist/bonus.js"></script>
+</body>
+
+</html>
